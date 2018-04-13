@@ -43,9 +43,9 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7E3B5B539E008DA39C295C97 /* Pods-MDPageMenu_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDPageMenu_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MDPageMenu_Tests/Pods-MDPageMenu_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		8B063D74B1B199B683D39656 /* MDPageMenu.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MDPageMenu.podspec; path = ../MDPageMenu.podspec; sourceTree = "<group>"; };
-		9ABBCD0F3A9B142D8F0F8966 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		C34F0E46A9ACE3AE6426EB59 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		8B063D74B1B199B683D39656 /* MDPageMenu.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MDPageMenu.podspec; path = ../MDPageMenu.podspec; sourceTree = "<group>"; };
+		9ABBCD0F3A9B142D8F0F8966 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C34F0E46A9ACE3AE6426EB59 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F987216197223EB0AE0A5A54 /* Pods_MDPageMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDPageMenu_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -215,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = HQ83A52EE5;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = HQ83A52EE5;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -520,6 +522,7 @@
 			baseConfigurationReference = 1BE24CD2C4DA76C6D07734CC /* Pods-MDPageMenu_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HQ83A52EE5;
 				INFOPLIST_FILE = MDPageMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -535,6 +538,7 @@
 			baseConfigurationReference = 0CAD7C3FDAA4C011E4F842BF /* Pods-MDPageMenu_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HQ83A52EE5;
 				INFOPLIST_FILE = MDPageMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -549,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7E3B5B539E008DA39C295C97 /* Pods-MDPageMenu_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HQ83A52EE5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -570,6 +575,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2CD320C9CC45B2DFB6B5C92B /* Pods-MDPageMenu_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HQ83A52EE5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

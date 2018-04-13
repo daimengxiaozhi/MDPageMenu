@@ -1,0 +1,6 @@
+framework module MDPageMenu {
+  umbrella header "MDPageMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}
