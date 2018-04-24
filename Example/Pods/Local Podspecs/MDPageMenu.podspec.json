@@ -1,9 +1,9 @@
 {
   "name": "MDPageMenu",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "A short description of MDPageMenu.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/85940969@qq.com/MDPageMenu",
+  "homepage": "https://github.com/daimengxiaozhi/MDPageMenu",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "85940969@qq.com": "85940969@qq.com"
   },
   "source": {
-    "git": "https://github.com/85940969@qq.com/MDPageMenu.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/daimengxiaozhi/MDPageMenu.git",
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "8.0"

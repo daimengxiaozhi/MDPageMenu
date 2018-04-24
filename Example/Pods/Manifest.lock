@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - MDPageMenu (0.1.0)
+  - MDPageMenu (0.1.2)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  MDPageMenu: 4b81522aa5f531a71c52fa36946c29d3f49410ba
+  MDPageMenu: b76588d4fecea3bd99141fc0ac7ea8156db5db8b
 
 PODFILE CHECKSUM: d1e455a55ee0752ce24f30d7c5e647a517e97352
 

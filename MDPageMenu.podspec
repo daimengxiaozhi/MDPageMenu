@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MDPageMenu'
-  s.version          = '0.1.1'
+  s.version          = '0.1.3'
   s.summary          = 'A short description of MDPageMenu.'
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/85940969@qq.com/MDPageMenu'
+  s.homepage         = 'https://github.com/daimengxiaozhi/MDPageMenu'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '85940969@qq.com' => '85940969@qq.com' }

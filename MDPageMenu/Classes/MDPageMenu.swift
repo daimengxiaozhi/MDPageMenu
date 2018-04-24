@@ -232,10 +232,6 @@ public class MDPageMenu: UIView {
     
     private var selectedButton:MDItem!
     
-    private lazy var setupWidths:NSMutableDictionary! = {
-        let setupWidths = NSMutableDictionary()
-        return setupWidths
-    }()
     private var beginOffsetX:CGFloat  = 0
     
     
@@ -606,8 +602,6 @@ public class MDPageMenu: UIView {
         }
         for i in 0...self.buttons.count - 1 {
             let button:MDItem = self.buttons[i] as! MDItem;
-            
-            let setupButtonW:CGFloat? = self.setupWidths?.object(forKey: "\(i)") as? CGFloat
 
             let title = button.titleLabel?.text == nil ? "" : button.titleLabel?.text
             
@@ -623,22 +617,15 @@ public class MDPageMenu: UIView {
             } else if ((button.currentTitle != nil) && (button.currentImage != nil) && (button.imagePosition == .top || button.imagePosition == .bottom)) {
                 contentW = max(textW, imageW!);
             }
-            if ((setupButtonW) != nil) {
-                contentW_sum = contentW_sum + setupButtonW!;
-                buttonWidths.add(setupButtonW!)
-                print(setupButtonW!)
-            } else {
-                contentW_sum = contentW_sum + contentW;
-                buttonWidths.add(contentW)
-                print(contentW)
-            }
+            contentW_sum = contentW_sum + contentW;
+            buttonWidths.add(contentW)
+    
         }
         
         let diff = itemScrollViewW - contentW_sum
         
         self.buttons.enumerateObjects({ (temp, idx, stop) in
             let button = temp as!UIButton
-            let setupButtonW:CGFloat? = self.setupWidths?.object(forKey: "\(idx)") as?CGFloat
             if permutationWay == .adaptContent{
                 buttonW = buttonWidths[idx] as! CGFloat
                 if idx == 0{
@@ -647,25 +634,16 @@ public class MDPageMenu: UIView {
                     button.frame = CGRect(x: itemPadding+lastButtonMaxX, y: 0, width: buttonW, height: itemScrollViewH)
                 }
             }else if permutationWay == .notScrollEqualWidths{
-                 // 求出外界设置的按钮宽度之和
-                let value  = NSArray.init(array: (setupWidths?.allValues)!)
-                let totalSetupButtonW:CGFloat? = value.value(forKeyPath: "sum.floatValue") as? CGFloat
-
-                // 如果该按钮外界设置了宽，则取外界设置的，如果外界没设置，则其余按钮等宽
-                if setupButtonW != nil{
-                    buttonW = setupButtonW!
+                let a = itemScrollViewW - itemPadding * CGFloat(self.buttons.count)
+                let b = self.buttons.count
+                buttonW = a/CGFloat(b)
+                if buttonW < 0{
+                    buttonW = 0
+                }
+                if idx == 0{
+                    button.frame = CGRect(x: itemPadding*0.5+lastButtonMaxX, y: 0, width: buttonW, height: itemScrollViewH)
                 }else{
-                    let a = itemScrollViewW - itemPadding * CGFloat(self.buttons.count) - totalSetupButtonW!
-                    let b = self.buttons.count - (self.setupWidths?.count)!
-                    buttonW = a/CGFloat(b)
-                    if buttonW < 0{
-                        buttonW = 0
-                    }
-                    if idx == 0{
-                        button.frame = CGRect(x: itemPadding*0.5+lastButtonMaxX, y: 0, width: buttonW, height: itemScrollViewH)
-                    }else{
-                        button.frame = CGRect(x: itemPadding+lastButtonMaxX, y: 0, width: buttonW, height: itemScrollViewH)
-                    }
+                    button.frame = CGRect(x: itemPadding+lastButtonMaxX, y: 0, width: buttonW, height: itemScrollViewH)
                 }
             }else{
                 itemPadding = diff/CGFloat(self.buttons.count)
