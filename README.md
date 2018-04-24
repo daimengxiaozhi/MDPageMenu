@@ -5,7 +5,15 @@
 [![License](https://img.shields.io/cocoapods/l/MDPageMenu.svg?style=flat)](http://cocoapods.org/pods/MDPageMenu)
 [![Platform](https://img.shields.io/cocoapods/p/MDPageMenu.svg?style=flat)](http://cocoapods.org/pods/MDPageMenu)
 
+
+![example](MDPageMenu.gif)
+
 ## Example
+
+
+```
+pod 'MDPageMenu'
+```
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
